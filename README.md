@@ -1,7 +1,7 @@
 
 ## 🚀 Installation
 
-It takes less than a minute to deploy the complete visible tech Manager on your fresh VPS. Choose the installation method that works best for you:
+It takes less than a minute to deploy the complete amokhan tech Manager on your fresh VPS. Choose the installation method that works best for you:
 
 
 
