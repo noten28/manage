@@ -2,10 +2,10 @@
 # =============================================================================
 #  reinstall.sh  -  pretty OS chooser for the one-click reinstall engine
 # =============================================================================
-#  Repo   : https://github.com/many9k/reinstallation
+#  Repo   : https://github.com/noten28/reinstallation
 #  Engine : https://github.com/bin456789/reinstall   (downloaded fresh each run)
 #
-#  Menu :   curl -fsSL https://raw.githubusercontent.com/many9k/reinstallation/main/reinstall.sh -o reinstall.sh
+#  Menu :   curl -fsSL https://raw.githubusercontent.com/noten28/reinstallation/main/reinstall.sh -o reinstall.sh
 #           bash reinstall.sh
 #
 #  What it does when you pick  Ubuntu > 22.04  is exactly:
