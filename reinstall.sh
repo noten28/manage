@@ -98,7 +98,7 @@ banner() {
   echo
   dx_top "$C"
   dx_center "$C" "$(grad '░▒▓  O S   R E I N S T A L L E R  ▓▒░')"
-  dx_center "$C" "${D}one-click · official installers · visibleTech🦜${N}"
+  dx_center "$C" "${D}one-click · official installers · amokhancyber👨‍💻${N}"
   dx_bot "$C"
 }
 
