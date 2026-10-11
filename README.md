@@ -39,6 +39,6 @@ curl -L -o reinstall.sh "https://raw.githubusercontent.com/many9k/manage/main/re
 ```
 
 <div align="center">
-  <b>Built by visible tech  FOUNDER~.Cyber 👨‍💻</b><br>
+  <b>Built by Amokhan tech  FOUNDER~.Cyber 👨‍💻</b><br>
   <i>"Fast configuration, Secure tunneling, Beautiful interfaces."</i>
 </div>
