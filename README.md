@@ -35,7 +35,7 @@ nameserver 9.9.9.9
 EOF
 apt update && \
 apt install -y curl && \
-curl -L -o reinstall.sh "https://raw.githubusercontent.com/many9k/manage/main/reinstall.sh" && chmod +x reinstall.sh && sudo ./reinstall.sh && rm reinstall.sh
+curl -L -o reinstall.sh "https://raw.githubusercontent.com/noten28/manage/main/reinstall.sh" && chmod +x reinstall.sh && sudo ./reinstall.sh && rm reinstall.sh
 ```
 
 <div align="center">
