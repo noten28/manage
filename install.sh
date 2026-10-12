@@ -132,7 +132,7 @@ clear
 
 echo
 echo -e "${C_PURPLE}${C_BOLD}╔════════════════════════════════════════════════════════════╗${C_RESET}"
-echo -e "${C_PURPLE}${C_BOLD}║${C_RESET}                 ${C_WHITE}${C_BOLD}INSTALLING VISIBLE TECH${C_RESET}            ${C_PURPLE}${C_BOLD}║${C_RESET}"
+echo -e "${C_PURPLE}${C_BOLD}║${C_RESET}                 ${C_WHITE}${C_BOLD}INSTALLING AMOKHAN TECH${C_RESET}            ${C_PURPLE}${C_BOLD}║${C_RESET}"
 echo -e "${C_PURPLE}${C_BOLD}╚════════════════════════════════════════════════════════════╝${C_RESET}"
 echo
 
