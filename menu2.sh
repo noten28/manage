@@ -71,7 +71,7 @@ PANEL_HTML_FILE="$DB_DIR/panel/index.html"
 PANEL_CONF="$DB_DIR/panel.conf"
 PANEL_SERVICE_FILE="/etc/systemd/system/VisibleTech-panel.service"
 PANEL_PORT=44380
-PANEL_REPO_BASE="https://github.com/many9k/manage/raw/main/panel"
+PANEL_REPO_BASE="https://github.com/noten28/manage/raw/main/panel"
 
 # --- ZiVPN Variables ---
 ZIVPN_DIR="/etc/zivpn"
@@ -2234,10 +2234,10 @@ install_udp_custom() {
     arch=$(uname -m)
     local binary_url=""
     if [[ "$arch" == "x86_64" ]]; then
-        binary_url="https://github.com/many9k/manage/raw/main/udp/udp-custom-linux-arm64"
+        binary_url="https://github.com/noten28/manage/raw/main/udp/udp-custom-linux-arm64"
         echo -e "${C_BLUE}ℹ️ Detected x86_64 (amd64) architecture.${C_RESET}"
     elif [[ "$arch" == "aarch64" || "$arch" == "arm64" ]]; then
-        binary_url="https://github.com/many9k/manage/raw/main/udp/udp-custom-linux-arm"
+        binary_url="https://github.com/noten28/manage/raw/main/udp/udp-custom-linux-arm"
         echo -e "${C_BLUE}ℹ️ Detected ARM64 architecture.${C_RESET}"
     else
         echo -e "\n${C_RED}❌ Unsupported architecture: $arch. Cannot install udp-custom.${C_RESET}"
@@ -2526,7 +2526,7 @@ write_websocket_script() {
 #
 # Behaviour:
 #   * HTTP "Upgrade: websocket" style payloads (GET/POST/PATCH/CONNECT/... any method)
-#     are answered with "101 Switching Protocols" (or "200 Connection established"
+#     are answered with "101 AmokhanV3" (or "200 Connection established"
 #     for CONNECT) and the connection is then relayed to the local SSH server.
 #   * Split payloads (several HTTP header blocks in a row) are handled.
 #   * Clients that send nothing (plain SSH, waits for the banner) or start with
@@ -2565,13 +2565,13 @@ def split_http(buf):
 def build_response(head):
     first = head.split(b'\n', 1)[0].strip()
     if first.upper().startswith(b'CONNECT '):
-        return b'HTTP/1.1 200 Visible-Tech\r\n\r\n'
+        return b'HTTP/1.1 200 AmokhanV3\r\n\r\n'
     key = None
     for line in head.split(b'\n')[1:]:
         name, _, value = line.partition(b':')
         if name.strip().lower() == b'sec-websocket-key':
             key = value.strip()
-    resp = (b'HTTP/1.1 101 visible-Tech\r\n'
+    resp = (b'HTTP/1.1 101 AmokhanV3\r\n'
             b'Upgrade: websocket\r\n'
             b'Connection: Upgrade\r\n')
     if key:
