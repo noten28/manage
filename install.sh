@@ -60,7 +60,7 @@ echo
 # margin / box = RED
 echo -e "${C_RED}${C_BOLD}╔══════════════════════════════════════════════════════════════════════╗${C_RESET}"
 # left border RED | spaces | title GREEN | spaces | right border RED
-echo -e "${C_RED}${C_BOLD}║${C_RESET}                ${C_GREEN}${C_BOLD}VISIBLE TECH MANAGER INSTALLER${C_RESET}                ${C_RED}${C_BOLD}║${C_RESET}"
+echo -e "${C_RED}${C_BOLD}║${C_RESET}                ${C_GREEN}${C_BOLD}AMOKHAN TECH MANAGER INSTALLER${C_RESET}                ${C_RED}${C_BOLD}║${C_RESET}"
 echo -e "${C_RED}${C_BOLD}║${C_RESET}                       ${C_ORANGE}Premium Edition${C_RESET}                        ${C_RED}${C_BOLD}║${C_RESET}"
 echo -e "${C_RED}${C_BOLD}╚══════════════════════════════════════════════════════════════════════╝${C_RESET}"
 echo
