@@ -195,7 +195,7 @@ done_step
 #                  SSH CONFIGURATION
 # ============================================================
 
-step "Applying VISIBLE TECH SSH configuration..."
+step "Applying AMOKHAN TECH SSH configuration..."
 
 SSHD_URL="$BASE_URL/ssh"
 
@@ -282,7 +282,7 @@ fi
 #                MANAGER SETUP
 # ============================================================
 
-step "Configuring VISIBLE TECH manager..."
+step "Configuring AMOKHAN TECH manager..."
 
 if bash "$MENU_FILE" --install-setup >/dev/null 2>&1; then
     done_step
