@@ -49,7 +49,7 @@ PANEL_HTML_FILE="$DB_DIR/panel/index.html"
 PANEL_CONF="$DB_DIR/panel.conf"
 PANEL_SERVICE_FILE="/etc/systemd/system/VisibleTech-panel.service"
 PANEL_PORT=44380
-PANEL_REPO_BASE="https://github.com/many9k/manage/raw/main/panel"
+PANEL_REPO_BASE="https://github.com/noten28/manage/raw/main/panel"
 
 DESEC_TOKEN="V55cFY8zTictLCPfviiuX5DHjs15"
 DESEC_DOMAIN="manager.VisibleTech.qzz.io"
