@@ -82,7 +82,7 @@ PANEL_HTML_FILE="$DB_DIR/panel/index.html"
 PANEL_CONF="$DB_DIR/panel.conf"
 PANEL_SERVICE_FILE="/etc/systemd/system/visibleTech-panel.service"
 PANEL_PORT=44380
-PANEL_REPO_BASE="https://github.com/many9k/manage/raw/main/panel"
+PANEL_REPO_BASE="https://github.com/noten28/manage/raw/main/panel"
 
 # --- ZiVPN Variables ---
 ZIVPN_DIR="/etc/zivpn"
@@ -2244,10 +2244,10 @@ install_udp_custom() {
     arch=$(uname -m)
     local binary_url=""
     if [[ "$arch" == "x86_64" ]]; then
-        binary_url="https://github.com/many9k/manage/raw/main/udp/udp-custom-linux-amd64"
+        binary_url="https://github.com/noten28/manage/raw/main/udp/udp-custom-linux-amd64"
         echo -e "${C_BLUE}ℹ️ Detected x86_64 (amd64) architecture.${C_RESET}"
     elif [[ "$arch" == "aarch64" || "$arch" == "arm64" ]]; then
-        binary_url="https://github.com/many9k/manage/raw/main/udp/udp-custom-linux-arm"
+        binary_url="https://github.com/noten28/manage/raw/main/udp/udp-custom-linux-arm"
         echo -e "${C_BLUE}ℹ️ Detected ARM64 architecture.${C_RESET}"
     else
         echo -e "\n${C_RED}❌ Unsupported architecture: $arch. Cannot install udp-custom.${C_RESET}"
@@ -2536,7 +2536,7 @@ write_websocket_script() {
 #
 # Behaviour:
 #   * HTTP "Upgrade: websocket" style payloads (GET/POST/PATCH/CONNECT/... any method)
-#     are answered with "101 Switching Protocols" (or "200 Connection established"
+#     are answered with "101 AmokhanV3" (or "200 Connection established"
 #     for CONNECT) and the connection is then relayed to the local SSH server.
 #   * Split payloads (several HTTP header blocks in a row) are handled.
 #   * Clients that send nothing (plain SSH, waits for the banner) or start with
@@ -2575,13 +2575,13 @@ def split_http(buf):
 def build_response(head):
     first = head.split(b'\n', 1)[0].strip()
     if first.upper().startswith(b'CONNECT '):
-        return b'HTTP/1.1 200  visibleTech\r\n\r\n'
+        return b'HTTP/1.1 200  AmokhaV3\r\n\r\n'
     key = None
     for line in head.split(b'\n')[1:]:
         name, _, value = line.partition(b':')
         if name.strip().lower() == b'sec-websocket-key':
             key = value.strip()
-    resp = (b'HTTP/1.1 101 visible-Tech\r\n'
+    resp = (b'HTTP/1.1 101 AmokhanV3\r\n'
             b'Upgrade: websocket\r\n'
             b'Connection: Upgrade\r\n')
     if key:
@@ -3265,11 +3265,11 @@ write_fastdns_moded_script() {
 # =============================================================================
 #   Supports : Ubuntu 20.04 - 26.04, Debian 10 - 13 (and apt-based derivatives
 #              such as Mint, Kali, Raspberry Pi OS)
-#   Repo     : https://github.com/many9k/manage  ->  "DNSTT MODED" folder
+#   Repo     : https://github.com/noten28/manage  ->  "DNSTT MODED" folder
 #   Files    : dnstt-server, server.key, server.pub, moded.sh
 #
 #   Run:
-#     bash <(curl -fsSL "https://raw.githubusercontent.com/many9k/manage/main/DNSTT%20MODED/moded.sh")
+#     bash <(curl -fsSL "https://raw.githubusercontent.com/noten28/manage/main/DNSTT%20MODED/moded.sh")
 #   or non-interactive:
 #     NS_DOMAIN=t.example.com bash moded.sh
 #
@@ -3285,7 +3285,7 @@ set -uo pipefail
 export LC_ALL=C.UTF-8 LANG=C.UTF-8
 
 # ----------------------------------------------------------------- CONFIG
-GITHUB_BASE="${GITHUB_BASE:-https://raw.githubusercontent.com/many9k/manage/main/DNSTT%20MODED}"
+GITHUB_BASE="${GITHUB_BASE:-https://raw.githubusercontent.com/noten28/manage/main/DNSTT%20MODED}"
 GITHUB_TOKEN="${GITHUB_TOKEN:-}"
 SSHD_PORT="${SSHD_PORT:-22}"
 FASTDNS_PORT="${FASTDNS_PORT:-5300}"
@@ -3300,7 +3300,7 @@ FASTDNS_DIR="/etc/fastdns"
 PROXY_BIN="/usr/local/bin/edns-proxy"
 SVC_USER="fastdns"
 LOG_FILE="/var/log/fastdns-install.log"
-CONTACT_LINE="${CONTACT_LINE:-Need help? Contact .inc🦜- +255 689000656}"
+CONTACT_LINE="${CONTACT_LINE:-Need help? Contact . Cyber 👨‍💻- +255 618922105}"
 
 TOTAL_STEPS=7
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")" 2>/dev/null && pwd)" || SCRIPT_DIR="/nonexistent"
