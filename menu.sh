@@ -64,7 +64,7 @@ V2_DIR="$DB_DIR/v2ray"
 V2_LIB_DIR="/usr/local/lib/visibleTech-v2ray"
 V2_MANAGER="$V2_LIB_DIR/ffv2ray.py"
 V2_XRAY_BIN="$V2_LIB_DIR/xray"
-V2_REPO_BASE="https://raw.githubusercontent.com/many9k/manage/main/V2RAY%20MODED"
+V2_REPO_BASE="https://raw.githubusercontent.com/noten28/manage/main/V2RAY%20MODED"
 V2_XRAY_SERVICE="ff-xray"
 V2_NGINX_SERVICE="ff-v2ray-nginx"
 V2_LIMITER_SERVICE="ff-v2ray-limiter"
@@ -94,7 +94,7 @@ PANEL_HTML_FILE="$DB_DIR/panel/index.html"
 PANEL_CONF="$DB_DIR/panel.conf"
 PANEL_SERVICE_FILE="/etc/systemd/system/visibleTech-panel.service"
 PANEL_PORT=44380
-PANEL_REPO_BASE="https://github.com/many9k/manage/raw/main/panel"
+PANEL_REPO_BASE="https://github.com/noten28/manage/raw/main/panel"
 
 # --- ZiVPN Variables ---
 ZIVPN_DIR="/etc/zivpn"
@@ -2260,10 +2260,10 @@ install_udp_custom() {
     arch=$(uname -m)
     local binary_url=""
     if [[ "$arch" == "x86_64" ]]; then
-        binary_url="https://github.com/many9k/manage/raw/main/udp/udp-custom-linux-amd64"
+        binary_url="https://github.com/noten28/manage/raw/main/udp/udp-custom-linux-amd64"
         echo -e "${C_BLUE}ℹ️ Detected x86_64 (amd64) architecture.${C_RESET}"
     elif [[ "$arch" == "aarch64" || "$arch" == "arm64" ]]; then
-        binary_url="https://github.com/many9k/manage/raw/main/udp/udp-custom-linux-arm"
+        binary_url="https://github.com/noten28/manage/raw/main/udp/udp-custom-linux-arm"
         echo -e "${C_BLUE}ℹ️ Detected ARM64 architecture.${C_RESET}"
     else
         echo -e "\n${C_RED}❌ Unsupported architecture: $arch. Cannot install udp-custom.${C_RESET}"
@@ -2552,7 +2552,7 @@ write_websocket_script() {
 #
 # Behaviour:
 #   * HTTP "Upgrade: websocket" style payloads (GET/POST/PATCH/CONNECT/... any method)
-#     are answered with "101 Switching Protocols" (or "200 Connection established"
+#     are answered with "101 AmokhanV3" (or "200 Connection established"
 #     for CONNECT) and the connection is then relayed to the local SSH server.
 #   * Split payloads (several HTTP header blocks in a row) are handled.
 #   * Clients that send nothing (plain SSH, waits for the banner) or start with
@@ -3281,11 +3281,11 @@ write_fastdns_moded_script() {
 # =============================================================================
 #   Supports : Ubuntu 20.04 - 26.04, Debian 10 - 13 (and apt-based derivatives
 #              such as Mint, Kali, Raspberry Pi OS)
-#   Repo     : https://github.com/many9k/manage  ->  "DNSTT MODED" folder
+#   Repo     : https://github.com/noten28/manage  ->  "DNSTT MODED" folder
 #   Files    : dnstt-server, server.key, server.pub, moded.sh
 #
 #   Run:
-#     bash <(curl -fsSL "https://raw.githubusercontent.com/many9k/manage/main/DNSTT%20MODED/moded.sh")
+#     bash <(curl -fsSL "https://raw.githubusercontent.com/noten28/manage/main/DNSTT%20MODED/moded.sh")
 #   or non-interactive:
 #     NS_DOMAIN=t.example.com bash moded.sh
 #
@@ -3301,7 +3301,7 @@ set -uo pipefail
 export LC_ALL=C.UTF-8 LANG=C.UTF-8
 
 # ----------------------------------------------------------------- CONFIG
-GITHUB_BASE="${GITHUB_BASE:-https://raw.githubusercontent.com/many9k/manage/main/DNSTT%20MODED}"
+GITHUB_BASE="${GITHUB_BASE:-https://raw.githubusercontent.com/noten28/manage/main/DNSTT%20MODED}"
 GITHUB_TOKEN="${GITHUB_TOKEN:-}"
 SSHD_PORT="${SSHD_PORT:-22}"
 FASTDNS_PORT="${FASTDNS_PORT:-5300}"
@@ -3316,7 +3316,7 @@ FASTDNS_DIR="/etc/fastdns"
 PROXY_BIN="/usr/local/bin/edns-proxy"
 SVC_USER="fastdns"
 LOG_FILE="/var/log/fastdns-install.log"
-CONTACT_LINE="${CONTACT_LINE:-Need help? Contact .inc🦜- +255 689000656}"
+CONTACT_LINE="${CONTACT_LINE:-Need help? Contact .Cyber👨‍💻- +255 618922105}"
 
 TOTAL_STEPS=7
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")" 2>/dev/null && pwd)" || SCRIPT_DIR="/nonexistent"
@@ -4488,7 +4488,7 @@ fastdns_installed() {
 }
 
 fastdns_main_domain() {
-    sed -nE 's/^ExecStart=.*-privkey-file [^ ]+ ([^ ]+) [^ ]+$/\1/p' "$FASTDNS_SERVICE_FILE" 2>/dev/null
+    sed -nE 's/^ExecStart=.*-privkey-file [^ ]+ ([^if ]+) [^ ]+$/\1/p' "$FASTDNS_SERVICE_FILE" 2>/dev/null
 }
 
 fastdns_extra_domains() {
