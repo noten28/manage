@@ -872,7 +872,7 @@ while true; do
             fi
             
             banner_content="<center>"
-            banner_content+="<font color=\"white\"><b>🅐︎🅜︎🅞︎🅚︎🅗︎🅐︎🅝︎ 🅣🅔🅒🅗 🅜🅐🅝🅐🅖🅔🅡</b></font><br>"
+            banner_content+="<br><font color=\"blue\"><b>🅐︎🅜︎🅞︎🅚︎🅗︎🅐︎🅝︎ 🅣🅔🅒🅗 🅜🅐🅝🅐🅖🅔🅡</b></font><br>"
             banner_content+="<font color=\"red\"><b>ғᴏᴜɴᴅᴇʀ ᴏʀ sᴄʀɪᴘᴛ . Cyber👨‍💻</b></font><br>"
             banner_content+="<font color=\"yellow\">▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬</font><br>"
             banner_content+="<font color=\"cyan\"><b>✨🅃🄰🄰🅁🄸🄵🄰 🅉🄰 🄰🄲🄲🄾🅄🄽🅃✨</b></font><br>"
