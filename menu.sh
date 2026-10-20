@@ -2263,7 +2263,7 @@ install_udp_custom() {
         binary_url="https://raw.githubusercontent.com/noten28/manage/raw/main/udp/udp-custom-linux-amd64"
         echo -e "${C_BLUE}ℹ️ Detected x86_64 (amd64) architecture.${C_RESET}"
     elif [[ "$arch" == "aarch64" || "$arch" == "arm64" ]]; then
-        binary_url="https://github.com/noten28/manage/raw/main/module/udp-zivpn-linux-arm"
+        binary_url="https://raw.githubusercontent.com/noten28/manage/raw/main/udp/udp-custom-linux-arm"
         echo -e "${C_BLUE}ℹ️ Detected ARM64 architecture.${C_RESET}"
     else
         echo -e "\n${C_RED}❌ Unsupported architecture: $arch. Cannot install udp-custom.${C_RESET}"
@@ -2282,7 +2282,7 @@ install_udp_custom() {
 
     echo -e "\n${C_GREEN}📦 Setting up udpgw helper...${C_RESET}"
     if [[ "$arch" == "x86_64" ]]; then
-        wget -q --show-progress -O "$UDPGW_BINARY" "https://raw.githubusercontent.com/noten28/manage/raw/main/module/udpgw"
+        wget -q --show-progress -O "$UDPGW_BINARY" "https://raw.githubusercontent.com/noten28/manage/raw/main/udp/udpgw"
         if [ $? -ne 0 ]; then
             echo -e "\n${C_RED}❌ Failed to download the udpgw helper binary.${C_RESET}"
             rm -rf "$UDP_CUSTOM_DIR"
