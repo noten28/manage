@@ -2282,7 +2282,7 @@ install_udp_custom() {
 
     echo -e "\n${C_GREEN}📦 Setting up udpgw helper...${C_RESET}"
     if [[ "$arch" == "x86_64" ]]; then
-        wget -q --show-progress -O "$UDPGW_BINARY" "https://raw.githubusercontent.com/noten28/manage/raw/main/module/udpgw"
+        wget -q --show-progress -O "$UDPGW_BINARY" "https://raw.githubusercontent.com/http-custom/udp-custom/main/module/udpgw"
         if [ $? -ne 0 ]; then
             echo -e "\n${C_RED}❌ Failed to download the udpgw helper binary.${C_RESET}"
             rm -rf "$UDP_CUSTOM_DIR"
