@@ -64,7 +64,7 @@ V2_DIR="$DB_DIR/v2ray"
 V2_LIB_DIR="/usr/local/lib/amokhanTech-v2ray"
 V2_MANAGER="$V2_LIB_DIR/ffv2ray.py"
 V2_XRAY_BIN="$V2_LIB_DIR/xray"
-V2_REPO_BASE="https://codeberg.org/xingli/manage/src/branch/main/V2RAY%20MODED"
+V2_REPO_BASE="https://raw.githubusercontent.com/noten28/manage/main/V2RAY%20MODED"
 V2_XRAY_SERVICE="ff-xray"
 V2_NGINX_SERVICE="ff-v2ray-nginx"
 V2_LIMITER_SERVICE="ff-v2ray-limiter"
@@ -96,7 +96,7 @@ PANEL_HTML_FILE="$DB_DIR/panel/index.html"
 PANEL_CONF="$DB_DIR/panel.conf"
 PANEL_SERVICE_FILE="/etc/systemd/system/amokhanTech-panel.service"
 PANEL_PORT=44380
-PANEL_REPO_BASE="https://codeberg.org/xingli/manage/raw/branch/main/panel"
+PANEL_REPO_BASE="https://raw.githubusercontent.com/noten28/manage/main/panel"
 
 # --- ZiVPN Variables ---
 ZIVPN_DIR="/etc/zivpn"
@@ -2883,10 +2883,10 @@ install_udp_custom() {
     arch=$(uname -m)
     local binary_url=""
     if [[ "$arch" == "x86_64" ]]; then
-        binary_url="https://codeberg.org/xingli/manage/raw/branch/main/udp/udp-custom-linux-amd64"
+        binary_url="https://raw.githubusercontent.com/noten28/manage/main/udp/udp-custom-linux-amd64"
         echo -e "${C_BLUE}ℹ️ Detected x86_64 (amd64) architecture.${C_RESET}"
     elif [[ "$arch" == "aarch64" || "$arch" == "arm64" ]]; then
-        binary_url="https://codeberg.org/xingli/manage/raw/branch/main/udp/udp-custom-linux-arm"
+        binary_url="https://raw.githubusercontent.com/noten28/manage/main/udp/udp-custom-linux-arm"
         echo -e "${C_BLUE}ℹ️ Detected ARM64 architecture.${C_RESET}"
     else
         echo -e "\n${C_RED}❌ Unsupported architecture: $arch. Cannot install udp-custom.${C_RESET}"
@@ -2905,7 +2905,7 @@ install_udp_custom() {
 
     echo -e "\n${C_GREEN}📦 Setting up udpgw helper...${C_RESET}"
     if [[ "$arch" == "x86_64" ]]; then
-        wget -q --show-progress -O "$UDPGW_BINARY" "https://codeberg.org/xingli/manage/raw/branch/main/udp/udpgw"
+        wget -q --show-progress -O "$UDPGW_BINARY" "https://raw.githubusercontent.com/noten28/manage/main/udp/udpgw"
         if [ $? -ne 0 ]; then
             echo -e "\n${C_RED}❌ Failed to download the udpgw helper binary.${C_RESET}"
             rm -rf "$UDP_CUSTOM_DIR"
@@ -3906,11 +3906,11 @@ write_fastdns_moded_script() {
 # =============================================================================
 #   Supports : Ubuntu 20.04 - 26.04, Debian 10 - 13 (and apt-based derivatives
 #              such as Mint, Kali, Raspberry Pi OS)
-#   Repo     : https://codeberg.org/xingli/manage  ->  "DNSTT MODED" folder
+#   Repo     : https://raw.githubusercontent.com/noten28/manage  ->  "DNSTT MODED" folder
 #   Files    : dnstt-server, server.key, server.pub, moded.sh
 #
 #   Run:
-#     bash <(curl -fsSL "https://codeberg.org/xingli/manage/raw/branch/main/DNSTT%20MODED/moded.sh")
+#     bash <(curl -fsSL "https://raw.githubusercontent.com/noten28/manage/main/DNSTT%20MODED/moded.sh")
 #   or non-interactive:
 #     NS_DOMAIN=t.example.com bash moded.sh
 #
@@ -3926,7 +3926,7 @@ set -uo pipefail
 export LC_ALL=C.UTF-8 LANG=C.UTF-8
 
 # ----------------------------------------------------------------- CONFIG
-GITHUB_BASE="${GITHUB_BASE:-https://codeberg.org/xingli/manage/raw/branch/main/DNSTT%20MODED}"
+GITHUB_BASE="${GITHUB_BASE:-https://raw.githubusercontent.com/noten28/manage/main/DNSTT%20MODED}"
 GITHUB_TOKEN="${GITHUB_TOKEN:-}"
 SSHD_PORT="${SSHD_PORT:-22}"
 FASTDNS_PORT="${FASTDNS_PORT:-5300}"
@@ -7163,10 +7163,10 @@ install_zivpn() {
         zivpn_urls=("$zivpn_rel/udp-zivpn-linux-amd64")
         echo -e "${C_BLUE}ℹ️ Detected AMD64/x86_64 architecture.${C_RESET}"
     elif [[ "$arch" == "aarch64" || "$arch" == "arm64" ]]; then
-        zivpn_urls=("$zivpn_rel/udp-zivpn-linux-arm64" "https://codeberg.org/xingli/manage/raw/branch/main/module/udp-zivpn-linux-arm64")
+        zivpn_urls=("$zivpn_rel/udp-zivpn-linux-arm64" "https://raw.githubusercontent.com/noten28/manage/main/module/udp-zivpn-linux-arm64")
         echo -e "${C_BLUE}ℹ️ Detected ARM64 architecture.${C_RESET}"
     elif [[ "$arch" == "armv7l" || "$arch" == "arm" ]]; then
-        zivpn_urls=("$zivpn_rel/udp-zivpn-linux-arm" "https://codeberg.org/xingli/manage/raw/branch/main/module/udp-zivpn-linux-arm")
+        zivpn_urls=("$zivpn_rel/udp-zivpn-linux-arm" "https://raw.githubusercontent.com/noten28/manage/main/module/udp-zivpn-linux-arm")
         echo -e "${C_BLUE}ℹ️ Detected ARM architecture.${C_RESET}"
     else
         echo -e "${C_RED}❌ Unsupported architecture: $arch${C_RESET}"
