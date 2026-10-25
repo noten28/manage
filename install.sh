@@ -32,7 +32,7 @@ C_STATUS_I=$C_GRAY
 C_ACCENT=$C_ORANGE
 
 # -------------------- SETTINGS --------------------
-BASE_URL="https://codeberg.org/xingli/manage/raw/branch/main"
+BASE_URL="https://raw.githubusercontent.com/noten28/manage/main"
 
 MENU_FILE="/usr/local/bin/menu"
 SSHD_CONFIG="/etc/ssh/sshd_config"
