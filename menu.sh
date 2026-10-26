@@ -3197,7 +3197,7 @@ FIRST_WAIT = 2.0
 MAX_HEADER = 16384
 WS_GUID = b'258EAFA5-E914-47DA-95CA-C5AB0DC85B11'
 # Server response text shown in VPN app logs (green). Clients that render HTML in logs show it coloured.
-SERVER_TAG = b'<font color="#00FF00">AmokhanV3</font>'
+SERVER_TAG = b'<font color="#00FF00"><b><i>AmokhanV3</b></i></font>'
 HTTP_REQ = re.compile(br'^[A-Za-z][A-Za-z\-]{1,20} \S+ HTTP/\d\.\d\r?\n')
 
 
